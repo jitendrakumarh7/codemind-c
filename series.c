@@ -1,20 +1,29 @@
 #include<stdio.h>
+#include<math.h>
 int main()
 {
-    int n,i,a=0,b=0;
+    int n,i,c=-1,a,ct=0,b;
     scanf("%d",&n);
-    for(i=1;i<=n+1;i++)
+    for(i=0;i<n;i++)
     {
         if(i%2!=0)
         {
-            a=a*2+1;
+            a=pow(3,ct);
             printf("%d ",a);
+            ct++;
         }
         else if(i%2==0)
-        {
-            b=b*3+2;
-            printf("%d ",b);
+        
+            if(c==-1)
+            {
+                printf("0 ");
+                c++;
+            }
+            else
+            {
+                b=pow(2,c);
+                printf("%d ",b);
+                c++;
+            }
         }
     }
-    
-}
