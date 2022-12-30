@@ -1,19 +1,18 @@
-// Online C compiler to run C program online
-#include <stdio.h>
-
-int main() {
+#include<stdio.h>
+int main()
+{
     int u;
-    float uc,bill,t;
+    float uc,s,b;
     scanf("%d",&u);
-    if(u<200)
+    if(u<199)
     {
         uc=1.20;
     }
-    else if(u>=200 && u<400)
+    else if(u>=200&&u<400)
     {
         uc=1.50;
     }
-    else if(u>=400 && u<600)
+     else if(u>=400&&u<600)
     {
         uc=1.80;
     }
@@ -21,15 +20,15 @@ int main() {
     {
         uc=2.00;
     }
-    bill=u*uc;
-    if(bill>=400)
+    if(u<400)
     {
-    t=bill+bill*0.15;
+        b=u*uc+100;
+        printf("%0.2f",b);
     }
-    
     else
     {
-        t=bill+100;
+        s=u*uc*0.15;
+        b=u*uc+s;
+        printf("%0.2f",b);
     }
-    printf("%0.2f",t);
 }
