@@ -1,58 +1,62 @@
 #include<stdio.h>
-int fib(int n)
-{
-    int a=0,b=1,c,i,ct=0;
-    for(i=1;i<=n;i++)
+int fib(int n){
+    int a=0,p=n;
+    int b=1,c=0,ct=0;
+    while(p--)
     {
         c=a+b;
         if(c==n)
         {
-            ct++;
+         ct=1;
+         break;
         }
+        
         a=b;
         b=c;
     }
-    if(ct==0)
+    if(ct==1)
     {
-        return 0;
+        return 1;
     }
     else
     {
-        return 1;
+        return 0;
     }
 }
 int main()
 {
-    int n,i,d=0,d1=0,s,s1;
+    int n,f1,f2,d1,d2;
     scanf("%d",&n);
-    for(i=n+1;;i++)
-    {
-        if(fib(i))
-        {
-            d=i-n;
-            s=i;
-            break;
-        }
-    }
-    for(i=n-1;;i--)
-    {
-        if(fib(i))
-        {
-            d1=n-i;
-            s1=i;
-            break;
-        }
-    }
-    if(d<d1)
-    {
-        printf("%d",s);
-    }
-    else if(d>d1)
-    {
-        printf("%d",s1);
-    }
-    else if(d==d1)
-    {
-        printf("%d %d",s1,s);
-    }
+   for(int i=n+1;;i++)
+   {
+       if(fib(i))
+       
+       {
+           f1=i;
+           d1=i-n;
+           break;
+       }
+   }
+    for(int i=n-1;;i--)
+   {
+       if(fib(i))
+       
+       {
+           f2=i;
+           d2=n-i;
+           break;
+       }
+   }
+   if(d1>d2)
+   {
+       printf("%d",f2);
+   }
+    else if (d1==d2)
+   {
+       printf("%d %d",f2,f1);
+   }
+   else
+   {
+       printf("%d",f1);
+   }
 }
