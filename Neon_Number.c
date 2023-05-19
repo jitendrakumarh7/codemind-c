@@ -1,16 +1,16 @@
 #include<stdio.h>
 int main()
 {
-    int n,a,s=0,r;
+    int n,r,s=0;
     scanf("%d",&n);
-    a=n*n;
-    while(a!=0)
+    int a=n*n;
+    while(a)
     {
         r=a%10;
         s=s+r;
         a=a/10;
     }
-    if(n==s)
+    if(s==n)
     {
         printf("Neon Number");
     }
