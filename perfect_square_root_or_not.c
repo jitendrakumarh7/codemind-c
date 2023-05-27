@@ -1,14 +1,15 @@
 #include<stdio.h>
 int main()
 {
-    int n,c=0,i;
+    int n,c=0;
     scanf("%d",&n);
-    for(i=1;i<=n;i++)
+    for(int i=1;i<n/4;i++)
     {
         if(i*i==n)
         {
+            c=1;
             printf("True");
-            c++;
+            break;
         }
     }
     if(c==0)
