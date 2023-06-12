@@ -1,22 +1,21 @@
 #include<stdio.h>
 int main()
 {
-    int n,c=0;
+    int n,i,c=0;
     scanf("%d",&n);
     int x[n];
-    for(int i=0;i<n;i++)
+    for(i=0;i<n;i++)
     {
         scanf("%d",&x[i]);
     }
-    for(int j=0;j<n;j++)
+    for(i=0;i<n;i++)
     {
-        if(x[j]==0||x[j]==1)
+        if(x[i]==1||x[i]==0)
         {
-            c=1;
+            c++;
         }
-        else c=0;
     }
-    if(c==1)
+    if(c==n)
     {
         printf("True");
     }
@@ -24,4 +23,5 @@ int main()
     {
         printf("False");
     }
+    
 }
