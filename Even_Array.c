@@ -1,19 +1,19 @@
 #include<stdio.h>
 int main()
 {
-    int n,x[n],i,c=0;
+    int n,i,c=0;
     scanf("%d",&n);
+    int x[n];
     for(i=0;i<n;i++)
     {
         scanf("%d",&x[i]);
     }
-      for(i=0;i<n;i++)
+    for(i=0;i<n;i++)
     {
-        
-     if(x[i]%2==0)
-     {
-         c++;
-     }
+        if(x[i]%2==0)
+        {
+            c++;
+        }
     }
     if(c==n)
     {
@@ -23,5 +23,5 @@ int main()
     {
         printf("False");
     }
-   
+    
 }
