@@ -1,7 +1,7 @@
 #include<stdio.h>
 int main()
 {
-    int n,i,c=0,ct=0;
+    int n,i,c=0,d=0;
     scanf("%d",&n);
     int x[n];
     for(i=0;i<n;i++)
@@ -10,16 +10,16 @@ int main()
     }
     for(i=0;i<n;i++)
     {
-        if(i%2==0&&x[i]%2==0)
+        if(i%2==0)
         {
             c++;
-        }
-        else if(i%2!=0&&x[i]%2==0)
-        {
-            ct++;
+            if(x[i]%2==0)
+            {
+                d++;
+            }
         }
     }
-    if(ct==0)
+    if(c==d)
     {
         printf("True");
     }
