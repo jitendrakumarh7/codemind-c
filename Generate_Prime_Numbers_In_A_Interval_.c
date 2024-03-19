@@ -1,22 +1,34 @@
-#include<stdio.h>
-int main()
+#include<bits/stdc++.h>
+#include<iostream>
+using namespace std;
+int prime(int n)
 {
-    int i,j,a,b,c;
-    scanf("%d%d",&a,&b);
-    for(i=a;i<=b;i++)
+    int c=1;
+    for(int i=1;i<(n/2)+1;i++)
     {
-        int c=0;
-        for(j=1;j<=i;j++)
+        if(n%i==0)
         {
-            if(i%j==0)
-            {
-                c++;
-            }
-        }
-        if(c==2)
-        {
-            printf("%d
-",i);
+            c++;
         }
     }
+    if(c==2) return 1;
+    else return 0;
+}
+int main()
+{
+    int a;
+    cin>>a;
+    int b;
+    cin>>b;
+    int c=0;
+    for(int i=a;i<=b;i++)
+    {
+       
+        if(prime(i))
+        {
+            cout<<i<<endl;
+        }
+        
+    }
+    
 }
